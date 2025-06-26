@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="loginpage1.css">
+  <title>ABB Robotics Login</title>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="form-container login">
+        <form action="login.php" method="post">
+        <h2>Log In</h2>
+        <div id="error-message" class="error-message" style="display: none;"></div>
+        
+        <input type="text" name="email" placeholder="Email" required>
+
+
+        <input type="password" name="password" placeholder="Password" required><br><br>
+
+        <select id="roles" name="role">
+          <option value="admin">Admin</option>
+          <option value="sales">Sales Representative</option>
+        </select>
+        <br><br>
+
+        <button id="login">Log In</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-right">
+          <h1>Welcome to <br> ABB Robotics!</h1>
+          <p>Please log In with your <br> assigned account</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="loginscript.js"></script>
+</body>
+</html>

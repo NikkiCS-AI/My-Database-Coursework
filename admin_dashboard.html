@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="ribbon">
+    <div class="ribbon-left">
+      <h2>ABB Robotics</h2>
+    </div>
+    <div class="ribbon-right">
+      <button id="menubutton"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGZJREFUSEvtlrENACAMw8pnnMZpfAYTC1W3CDOEA2JhUpUW0GkQNwx+Zt6qj+ohdp7yKtVLDE6c78DiC+c4t/o46WLX8877rlzYOGGqxU/scYryB4KVCwNja9GtlhvwWpQrrQIx1Rt3TwofeC3yFwAAAABJRU5ErkJggg=="/></button>
+      <div id="optionsbox" class="hidden">
+          <div id="option"><a href="login.html" id="signoutbutton">Sign Out</a></div>                    
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <a href="user_management.html"><i class="fa-solid fa-circle-user fa-lg" style="color: #ffffff;"></i><br> User <br>Management</a>
+      <p>Manage Sales Representatives</p>
+    </div>
+    <div class="box">
+      <a href="admin_customers.html"><i class="fa-solid fa-user-group fa-lg" style="color: #ffffff;"></i><br>Customer<br>Management</a>
+      <p>Manage Sales customers</p>
+    </div>
+    <div class="box">
+      <a href="admin_leads.html"><i class="fa-solid fa-calendar fa-lg" style="color: #ffffff;"></i><br>Lead<br>Management</a>
+      <p>View Sales leads</p>
+    </div>
+
+  </div>
+  <script src="dashboard.js"></script>
+ </body>
+</html>
+

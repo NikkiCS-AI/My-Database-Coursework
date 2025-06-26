@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABB CRM - Interaction</title>
+  <link rel="stylesheet" href="interactions.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+<body>
+  <div class="ribbon">
+    <div class="ribbon-left">
+      <a href="sales_dashboard.html" class="backbutton"><i class="fa-solid fa-arrow-left" style="color: #37023a;"></i></a>
+    </div>
+    
+    <h2>Interaction Management</h2>
+    <div class="ribbon-right">
+      <a href="reminders.html"><i class="fa-solid fa-bell" style="color: #37023a;" ></i></a>
+      <a href="login.html">
+        <button class="signout-button">Sign Out</button>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+      <div class="tablebar">      
+        <div class="add-button">
+          <button onclick="showForm('add')"><i class="fa-solid fa-plus fa-2xs" style="color: #ffffff;"></i> Add Interaction</button>
+        </div>
+      <div class="searchbtn">
+        <input type="text" id="searchInput" onkeyup="filterinteractions()" placeholder="Search by Name">
+      </div>
+      </div>
+
+
+  <div id="interactionFormWrapper" style="display: none;">
+    <h2 id="formTitle">Log New Interaction</h2>
+    <form id="interactionForm">
+      <input type="hidden" id="editIndex">
+
+      <label for="customer-id">Customer ID:</label>
+      <input type="text" id="customer-id" name="customer-id" required>
+
+      <label for="interaction-date">Date:</label>
+      <input type="date" id="interaction-date" name="date" required>
+
+      <label for="interaction-type">Type:</label>
+      <select id="interaction-type" name="type" required>
+        <option value="">Select type</option>
+        <option value="Call">Call</option>
+        <option value="Meeting">Meeting</option>
+        <option value="Email">Email</option>
+      </select>
+
+      <label for="interaction-description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-light">Save</button>
+        <button type="button" class="btn-light" onclick="hideForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+    <div class="table-container">
+      <h2>Previous Interactions</h2>
+      <table id="interactionTable">
+        <thead>
+          <tr>
+            <th>Interaction ID</th>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="interactions.js">  </script>
+</body>
+</html>

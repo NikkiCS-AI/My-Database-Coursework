@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="customers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Customer Management</title>
+</head>
+<body>
+
+  <div class="ribbon">
+    <div class="ribbon-left">
+      <a href="sales_dashboard.html" class="backbutton"><i class="fa-solid fa-arrow-left" style="color: #37023a;"></i></a>
+    </div>
+    
+    <h2>Customer Management</h2>
+    <div class="ribbon-right">
+      <a href="reminders.html"><i class="fa-solid fa-bell" style="color: #37023a;" ></i></a>
+      <a href="login.html">
+        <button class="signout-button">Sign Out</button>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+      <div class="tablebar">      
+        <div class="add-button">
+          <button onclick="showForm('add')"><i class="fa-solid fa-plus fa-2xs" style="color: #ffffff;"></i> Add New Customer</button>
+        </div>
+        <div class="searchbtn">
+          <input type="text" id="searchInput" onkeyup="filterCustomers()" placeholder="Search by name...">
+
+        </div>
+      </div>
+
+      <div id="customerForm">
+        <h3 id="formTitle">Add Customer</h3>
+        <form id="customerFormElement" onsubmit="handleForm(event)">
+          <input type="hidden" id="editIndex">
+          
+          <label>Lead ID (Optional):</label>
+          <select id="lead_id" name="lead_id">
+            <option value="">None</option>
+          </select><br>
+        
+          <label>Name:</label><input type="text" id="name" name="name" required><br>
+          <label>Company:</label><input type="text" id="company" name="company" required><br>
+          <label>Email:</label><input type="email" id="email" name="email" required><br>
+          <label>Phone:</label><input type="tel" id="phone" name="phone" required><br>
+          <label>Address:</label><input type="text" id="address" name="address" required><br>
+        
+          <div class="btn-light">
+            <button type="submit">Save Customer</button>
+            <button type="button" onclick="hideForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+  </div>
+
+  <div class="customer-table">
+    <table id="customerTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable('customer_id')">Customer ID</th>
+          <th onclick="sortTable('Name')">Name</th>
+          <th onclick="sortTable('Company')">Company</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Interaction History</th>
+          <th>  </th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>   
+  </div>
+  <script src="customers.js"></script>
+
+</body>
+</html>

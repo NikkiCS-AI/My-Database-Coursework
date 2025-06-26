@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <title>Leads Summary</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f5f0ff, #e0d3f7, #c9b6f2);
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+   
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #4b0082;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .widgets {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .widget {
+      background: linear-gradient(135deg, #d3bffb, #b084f7);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2);
+      padding: 25px;
+      text-align: center;
+      color: #4b0082;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #d9c2fa;
+    }
+
+    .widget:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(138, 43, 226, 0.3);
+    }
+
+    .widget h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .widget p {
+      font-size: 18px;
+      font-weight: 500;
+      color: #5e2ca5;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Leads Summary</h1>
+
+  <div class="widgets">
+    <div class="widget" id="totalLeads">
+      <h2>0</h2>
+      <p>Total Leads</p>
+    </div>
+    <div class="widget" id="newLeads">
+      <h2>0</h2>
+      <p>New Leads</p>
+    </div>
+    <div class="widget" id="upcomingFollowups">
+      <h2>0</h2>
+      <p>Upcoming Follow-ups</p>
+    </div>
+    <div class="widget" id="overdueFollowups">
+      <h2>0</h2>
+      <p>Overdue Follow-ups</p>
+    </div>
+  </div>
+
+<script>
+function loadWidgets() {
+  fetch('widget.php')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector('#totalLeads h2').textContent = data.totalLeads;
+      document.querySelector('#newLeads h2').textContent = data.newLeads;
+      document.querySelector('#upcomingFollowups h2').textContent = data.upcomingFollowups;
+      document.querySelector('#overdueFollowups h2').textContent = data.overdueFollowups;
+    })
+    .catch(error => console.error('Error fetching widget data:', error));
+}
+
+loadWidgets();
+</script>
+
+</body>
+</html> 

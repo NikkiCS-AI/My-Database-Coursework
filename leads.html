@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lead Management</title>
+  <link rel="stylesheet" href="leads.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="ribbon">
+    <div class="ribbon-left">
+      <a href="sales_dashboard.html" class="backbutton"><i class="fa-solid fa-arrow-left" style="color: #37023a;"></i></a>
+    </div>
+    <h2>Lead Management</h2>
+    <div class="ribbon-right">
+      <a href="reminders.html"><i class="fa-solid fa-bell" style="color: #37023a;" ></i></a>
+      <a href="login.html"><button class="signout-button">Sign Out</button></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tablebar">      
+      <div class="add-button">
+        <button onclick="showForm('add')"><i class="fa-solid fa-plus fa-2xs" style="color: #ffffff;"></i> Add New Lead</button>
+      </div>
+      <div class="searchbtn">
+        <input type="text" id="searchInput" onkeyup="filterLeads()" placeholder="Search by ID">
+      </div>
+    </div>
+
+    <div id="leadForm" style="display: none;">
+      <h3 id="formTitle">Add Leads</h3>  
+      <form id="leadform">
+        <input type="hidden" id="editIndex">
+        <label>Status:</label>
+        <select id="status" name="status" required>
+          <option>New</option>
+          <option>Contacted</option>
+          <option>In Progress</option>
+          <option>Closed</option>
+        </select><br>
+        <div id="customerid-div" style="display:none;">
+          <label>Customer ID:</label>
+          <input type="text" id="customerid" name="customerid" readonly><br>
+        </div>
+        <label>Follow-up Date:</label><input type="date" id="followup" name="followup" required><br>
+        <label>Notes:</label><textarea id="notes" name="notes" required></textarea><br>
+        <div class="buttons">
+          <button type="submit" class="btn-light">Add Lead</button>
+          <button type="button" class="btn-light" onclick="hideForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="leadtable">
+    <table id="leadTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable('Lead_id')">Lead ID</th>
+          <th onclick="sortTable('Customer_id')">Customer ID</th>
+          <th onclick="sortTable('status')">Status</th>
+          <th onclick="sortTable('follow_up_date')">Follow-up date</th>
+          <th>Lead notes</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>   
+  </div>
+
+  <script src="leads.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+  background-color: #fef7ff;
+}
+.ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #decfde;
+  padding: 20px 40px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  top: 0;
+  z-index: 1000;
+
+}
+
+.ribbon h2 {
+  flex: 2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: #5b336a;
+  font-size: 40px;
+}
+
+.ribbon-left{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.ribbon-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.ribbon-right a {
+  font-size: 20px;
+  text-decoration: none;
+}
+.ribbon-right button {
+  padding: 10px 18px;
+  background-color: #8a5ca5;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.ribbon-right button:hover {
+  background-color: #f2f2f2;
+  color: #8E7C93;
+}
+.container{
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.tablebar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:40px 0 8px 0;   
+}
+.searchbtn input{
+  padding: 3px 9px;
+  background-color: #fffdfd;
+  color: #69646b;
+  font-size: 14px;
+  border-width: 1px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border-radius: 2px;    
+}
+.searchbtn input:focus{
+  transform: translateY(-2px) translateX(-2px);
+}
+
+form label {
+  display: block;
+  margin: 0.8em 0 0.3em;
+  font-weight: 600;
+  color: #333;
+}
+
+form input, form select, form textarea {
+  width:60%;
+  max-width: 500px;
+  text-align: left;
+  display: block;
+  gap: 10px 10px;
+  padding: 10px;
+  margin:10px 0px 0px;
+}
+
+.form-actions button{
+  margin: 4px;
+  padding: 3px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  background-color: #fffafa;
+  color: #5b3b66;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  }
+.form-actions button:hover{
+background-color: #e3e2e2;
+transform: translateY(-1px);
+}
+.add-button {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+}
+
+.add-button button{
+    padding: 3px 9px;
+    background-color: #8a5ca5;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+.add-button button:hover{
+    background-color: #b48fc9;
+    transform: translateY(-1px);
+}
+.btn-light {
+  padding: 3px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  background-color: #eee;
+  color: #6d4d79;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+}
+.btn-light:hover{
+  background-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.table-container {
+  margin-top: 2em;
+}
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  border-color: white;
+  border-width: 1px;
+}
+
+th {
+  padding: 13px;
+  margin: 0 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  background-color: #634b6a;
+  color: #f2f2f2;
+  letter-spacing: 1px;
+}
+
+td {
+  background-color: #fdfbff;
+  padding: 15px;
+  border: 1px #ffffff;
+}
+
+th, td {
+  font-size: 14px;
+}
+
+.action-buttons button {
+  margin-right: 0.5em;
+}
+
+.deletebutton, .updatebutton{
+padding: 8px 14px;
+font-weight: bold;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin: 0 4px;
+transition: all 0.3s ease;
+}
+.updatebutton {
+background-color: #c6a9c6;
+color: #3e303f;
+}
+
+.updatebutton:hover {
+background-color: #e1d3e1;
+transform: translateY(-2px);
+}
+
+.deletebutton {
+background-color: #a80d0d;
+color: #ffffff;
+
+}
+
+.deletebutton:hover {
+background-color: #070000;
+transform: translateY(-2px);
+}
+
+.backbutton{
+position: absolute;
+top: 25px;
+left: 20px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
+font-size: 25px;
+text-decoration: none;
+}

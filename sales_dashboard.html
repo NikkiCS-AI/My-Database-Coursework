@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <div class="ribbon">
+    <div class="ribbon-left">
+      <h2>ABB Robotics</h2>
+    </div>
+    <div class="ribbon-right">
+     <a href="reminders.html" id="reminderTab">
+  <i class="fa-solid fa-bell" style="color: #37023a;"></i>
+  <span id="reminderCount" style="background:red;color:white;padding:2px 6px;border-radius:50%;font-size:0.7em;display:none;margin-left:-8px;margin-top:-10px;position:absolute;"></span>
+</a>
+
+      <button id="menubutton"><i class="fa-solid fa-bars" style="color: #37023a;"></i></button>
+      <div id="optionsbox" class="hidden">
+          <div id="option"><a href="useraccount.html">Your Account</a></div>
+          <div id="option"><a href="login.html" id="signoutbutton">Sign Out</a></div>                    
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <a href="customers.html"><i class="fa-solid fa-user-group fa-lg" style="color: #ffffff;"></i><br>Customer<br>Management</a>
+      <p>Manage your customers</p>
+    </div>
+    <div class="box">
+      <a href="leads.html"><i class="fa-solid fa-calendar fa-lg" style="color: #ffffff;"></i><br>Lead<br>Management</a>
+      <p>Manage your leads</p>
+    </div>
+    <div class="box">
+      <a href="interactions.html"><i class="fa-solid fa-comments fa-lg" style="color: #ffffff;"></i><br>Interaction<br>History</a>
+      <p>View your interactions</p>
+    </div>
+  </div>
+
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
