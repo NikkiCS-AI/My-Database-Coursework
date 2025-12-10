@@ -43,30 +43,28 @@ http://localhost/[your-project-folder]/
 
 ## 🧭 Usage
 
-Log in (or register) using the provided authentication form.
+* Log in (or register) using the provided authentication form.
 
-Use the dashboard/admin panel to manage customers, leads, interactions, reminders, and view sales data.
+* Use the dashboard/admin panel to manage customers, leads, interactions, reminders, and view sales data.
 
-Perform CRUD operations (Create / Read / Update / Delete) on customer, lead, interaction records via the web interface.
-
-## 📂 Project Structure
-/ (root)
-├── COMP1044_Database.sql            ← SQL schema for database setup  
-├── login.php / login.html           ← Login page for authentication  
-├── (other PHP / HTML / JS / CSS files) ← Front-end and backend scripts  
-├── admin / dashboard / customer / lead / interaction pages  
-└── README.md                        ← This README file  
+* Perform CRUD operations (Create / Read / Update / Delete) on customer, lead, interaction records via the web interface.
+ 
 
 ## 🎯 What I Learned & Motivation
 
 This project helped me to:
 
-Design a relational database schema that handles customers, leads, interactions, and reminders
+* Design a relational database schema that handles customers, leads, interactions, and reminders
 
-Implement CRUD operations using PHP & MySQL
+* Implement CRUD operations using PHP & MySQL
 
-Build a full-stack web app with HTML/CSS/JavaScript front-end and PHP back-end
+* Build a full-stack web app with HTML/CSS/JavaScript front-end and PHP back-end
 
-Use local development tools (MAMP) to run a PHP + MySQL project
+* Use local development tools (MAMP) to run a PHP + MySQL project
+
+## 👤 Author
+
+Nikki
+Client–Server Networking Coursework Project (C Socket Programming)
 
 
